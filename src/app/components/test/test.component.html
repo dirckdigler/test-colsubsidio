@@ -1,0 +1,54 @@
+<div class="row m-5">
+  <div class="col">
+    <h2>API users</h2>
+    <button type="button" class="btn btn-primary" data-toggle="modal"
+      data-target="#exampleModal">
+      Register user
+    </button>
+
+    <!-- Modal -->
+    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog"
+      aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Register user</h5>
+            <button type="button" class="close" data-dismiss="modal"
+              aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+              <form (ngSubmit)="onSubmit(f)" #f="ngForm" class="jumbotron">
+                <input class="form-control" type="text" name="fName" placeholder="name" ngModel>
+                <input class="form-control" type="text" name="lName" placeholder="job" ngModel>
+                <button type="submit" class="btn btn-primary">Save</button>
+              </form>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary"
+              data-dismiss="modal">Close</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <table class="table">
+        <tr>
+          <th>Name</th>
+          <th>Leader</th>
+        </tr>
+        <tr *ngFor="let user of users">
+          <td>
+            {{user.first_name}}
+          </td>
+          <td class="album-name">
+            trabajo
+          </td>
+          <td>
+            <button type="button" class="btn btn-success">Edit</button>
+          </td>
+        </tr>
+    </table>
+  </div>
+</div>
