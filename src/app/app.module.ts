@@ -23,6 +23,7 @@ import { ModalComponent } from './modal/modal.component';
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
+    FormsModule,
     RouterModule.forRoot(ROUTES, { useHash: true }),
   ],
   providers: [],
